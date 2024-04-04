@@ -1,9 +1,17 @@
-n=$1
-x=$2
-y=$3
-if [ $((n % x)) -eq 0 ] && [ $((n % y)) -eq 0 ]
-then
- echo true
+greatest=0
+smallest=0
+result=0
+if (($1 > $2)); then
+  greatest=$1
+  smallest=$2
 else
-  echo false
+  greatest=$2
+  smallest=$1
 fi
+
+for ((i=$smallest; i <= greatest; i++))
+do
+  result=$(( result + i ))
+done
+
+echo $result
