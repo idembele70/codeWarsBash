@@ -1,5 +1,4 @@
-say_hello(){
-  echo "Hello, $1"
-}
+position=$1
+roll=$(($2 * 2))
 
-say_hello "$1"
+echo $((position + roll))
